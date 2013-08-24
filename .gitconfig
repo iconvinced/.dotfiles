@@ -1,0 +1,7 @@
+[user]
+	name = Plenty Su
+	email = plentysu@wherever
+[color]
+    ui = true
+[core]
+	editor = vim
