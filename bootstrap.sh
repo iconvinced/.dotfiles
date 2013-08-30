@@ -11,6 +11,7 @@ INSTALL_FILES=(
     ".bash_profile"
     ".gitconfig"
     ".vimrc"
+    ".tmux.conf"
 )
 
 echo "install .dotfiles to $INSTALL_FOLDER:"
