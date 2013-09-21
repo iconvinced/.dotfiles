@@ -40,4 +40,4 @@ endif
 " for airline
 " set laststatus=2
 " set noshowmode
-" let g:bufferline_echo = 0
+" let g:airline_theme = 'solarized'
