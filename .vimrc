@@ -24,6 +24,8 @@ if has("autocmd")
         \   exe "normal g'\"" |
         \ endif
 endif
+
+colorscheme molokai
  
 " for FreeBSD
 " set backspace=2
@@ -38,6 +40,5 @@ let g:ctrlp_user_command = 'find %s -type f'
 let g:ctrlp_working_path_mode = 0
 
 " statusline
-hi StatusLine ctermfg=000 ctermbg=255
 set laststatus=2
 set statusline=[%l/%L]\ %F\ %m\ %=\ [%{&fenc==\"\"?&enc:&fenc}]
