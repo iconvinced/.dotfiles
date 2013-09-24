@@ -11,11 +11,6 @@ set hlsearch
 set incsearch
 set ignorecase
  
-highlight comment ctermfg=green
-highlight search ctermbg=gray
-highlight Pmenu ctermfg=white
-highlight PmenuSel ctermfg=white ctermbg=green
-
 " open vim at the location that was last edited
 if has("autocmd")
     autocmd BufRead *.txt set tw=78
@@ -25,8 +20,6 @@ if has("autocmd")
         \ endif
 endif
 
-colorscheme molokai
- 
 " for FreeBSD
 " set backspace=2
 
@@ -42,3 +35,8 @@ let g:ctrlp_working_path_mode = 0
 " statusline
 set laststatus=2
 set statusline=[%l/%L]\ %F\ %m\ %=\ [%{&fenc==\"\"?&enc:&fenc}]
+
+" molokai scheme
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
