@@ -1,7 +1,7 @@
 export LANG="en_US.UTF-8"
 export TERM="screen-256color"
 export EDITOR="vim"
-export PROMPT_COMMAND="export PS1=\"\[\e[1;32m\]\u@\H:\$PWD\[\e[0m\] \""
+export PROMPT_COMMAND="export PS1=\"\[\e[1;32m\]\u@\H:\$PWD\[\e[0m\]\n> \""
 
 alias ll='ls -lhF'
 alias grep='grep --color'
