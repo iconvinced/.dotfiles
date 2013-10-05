@@ -9,5 +9,7 @@ alias vi='vim'
 
 
 # for pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+if [[ -d "$HOME/.pyenv" ]]; then
+    export PATH="$HOME/.pyenv/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
