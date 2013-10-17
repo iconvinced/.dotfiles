@@ -11,13 +11,21 @@ set hlsearch
 set incsearch
 set ignorecase
  
-" open vim at the location that was last edited
 if has("autocmd")
+    " open vim at the location that was last edited
     autocmd BufRead *.txt set tw=78
     autocmd BufReadPost *
         \ if line("'\"") > 0 && line ("'\"") <= line("$") |
         \   exe "normal g'\"" |
         \ endif
+
+    " highlight trailing whitespace
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    match ExtraWhitespace /\s\+$/
+    autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+    autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+    autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+    autocmd BufWinLeave * call clearmatches()
 endif
 
 " for FreeBSD
