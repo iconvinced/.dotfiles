@@ -3,6 +3,7 @@ filetype indent on
 
 set encoding=utf-8
 set number
+set relativenumber
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -18,14 +19,6 @@ if has("autocmd")
         \ if line("'\"") > 0 && line ("'\"") <= line("$") |
         \   exe "normal g'\"" |
         \ endif
-
-    " highlight trailing whitespace
-    highlight ExtraWhitespace ctermbg=red guibg=red
-    match ExtraWhitespace /\s\+$/
-    autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-    autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-    autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-    autocmd BufWinLeave * call clearmatches()
 endif
 
 " for FreeBSD
