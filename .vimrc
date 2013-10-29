@@ -3,7 +3,6 @@ filetype indent on
 
 set encoding=utf-8
 set number
-set relativenumber
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -35,7 +34,7 @@ let g:ctrlp_working_path_mode = 0
 
 " statusline
 set laststatus=2
-set statusline=[%l/%L]\ %F\ %m\ %=\ [%{&fenc==\"\"?&enc:&fenc}]
+set statusline=[%l/%L]\ %F\ %m\ %=\ [%{&fenc==\"\"?&enc:&fenc}]\ [%{&ff}]
 
 " molokai scheme
 colorscheme molokai
