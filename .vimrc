@@ -6,6 +6,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/molokai'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
 filetype plugin indent on
 
 syntax on
@@ -44,3 +45,6 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links' }
 let g:ctrlp_user_command = { 'types': { 1: ['.git', 'cd %s && git ls-files'], }, 'fallback': 'find %s -type f' }
+
+" for NerdTree
+map <F2> :NERDTreeToggle <CR>
