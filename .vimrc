@@ -32,12 +32,24 @@ if has("autocmd")
         \ endif
 endif
 
+" highlight extra white space
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" shortcut to move between buffered files
+map <C-l> :bn <CR>
+map <C-h> :bp <CR>
+
 " statusline
 set laststatus=2
 set statusline=[%l/%L]\ %F\ %m\ %=\ [%{&fenc==\"\"?&enc:&fenc}]\ [%{&ff}]
 
 " for easymotion
-let g:EasyMotion_leader_key = '<C-g>'
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
 
 " for ctrlp
 let g:ctrlp_map = '<c-p>'
