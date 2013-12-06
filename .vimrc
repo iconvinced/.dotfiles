@@ -4,13 +4,11 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'vim-scripts/molokai'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 filetype plugin indent on
 
 syntax on
-colorscheme molokai
 
 set encoding=utf-8
 set number
@@ -22,7 +20,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set backspace=2
- 
+
 " open vim at the location that was last edited
 if has("autocmd")
     autocmd BufRead *.txt set tw=78
