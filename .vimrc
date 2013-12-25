@@ -6,6 +6,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jnwhiteh/vim-golang'
 filetype plugin indent on
 
 syntax on
