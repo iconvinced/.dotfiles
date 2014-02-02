@@ -12,13 +12,14 @@ INSTALL_FILES=(
     ".gitconfig"
     ".vimrc"
     ".tmux.conf"
+    ".vim/"
 )
 
 echo "install .dotfiles to $INSTALL_FOLDER:"
 if [[ -d $INSTALL_FOLDER ]]; then
     for file in ${INSTALL_FILES[@]}; do
         echo "    $file"
-        cp $file $INSTALL_FOLDER
+        cp -R $file $INSTALL_FOLDER
     done
 fi
 echo "done"
