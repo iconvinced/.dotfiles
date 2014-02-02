@@ -12,7 +12,7 @@ INSTALL_FILES=(
     ".gitconfig"
     ".vimrc"
     ".tmux.conf"
-    ".vim/"
+    ".vim"
 )
 
 echo "install .dotfiles to $INSTALL_FOLDER:"
