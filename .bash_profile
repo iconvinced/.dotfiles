@@ -21,3 +21,6 @@ if [[ ! -d "$HOME/gopath/3rd" || ! -d "$HOME/gopath/default" ]]; then
     mkdir -p "$HOME/gopath/default/src" "$HOME/gopath/default/bin" "$HOME/gopath/default/pkg"
 fi
 export GOPATH="$HOME/gopath/3rd:$HOME/gopath/default"
+
+# https://github.com/vigneshwaranr/bd
+alias bd='. bd -s'

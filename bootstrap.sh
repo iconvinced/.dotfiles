@@ -13,6 +13,7 @@ INSTALL_FILES=(
     ".vimrc"
     ".tmux.conf"
     ".vim"
+    "bin"
 )
 
 echo "install .dotfiles to $INSTALL_FOLDER:"
