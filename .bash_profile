@@ -29,3 +29,10 @@ alias bd='. bd -s'
 if [[ -f "$HOME/.bash_local" ]]; then
     source "$HOME/.bash_local"
 fi
+
+# ssh-agent
+if [[ -z $SSH_AGENT_PID ]]; then
+    eval `ssh-agent`
+    ssh-add
+    trap "ssh-agent -k" EXIT
+fi
