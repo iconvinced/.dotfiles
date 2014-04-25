@@ -32,7 +32,6 @@ fi
 
 # ssh-agent
 if [[ -z $SSH_AGENT_PID ]]; then
-    eval `ssh-agent`
-    ssh-add
+    eval `ssh-agent -s`
     trap "ssh-agent -k" EXIT
 fi
