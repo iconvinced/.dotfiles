@@ -7,6 +7,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'vim-scripts/python.vim'
 filetype plugin indent on
 
 syntax on
