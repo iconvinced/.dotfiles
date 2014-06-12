@@ -9,20 +9,6 @@ alias ll='ls -lhF'
 alias grep='grep --color'
 alias vi='vim'
 
-
-# for pyenv
-if [[ -d "$HOME/.pyenv" ]]; then
-    export PATH="$HOME/.pyenv/bin:$PATH"
-    eval "$(pyenv init -)"
-fi
-
-# for golang
-if [[ ! -d "$HOME/gopath/3rd" || ! -d "$HOME/gopath/default" ]]; then
-    mkdir -p "$HOME/gopath/3rd/src" "$HOME/gopath/3rd/bin" "$HOME/gopath/3rd/pkg"
-    mkdir -p "$HOME/gopath/default/src" "$HOME/gopath/default/bin" "$HOME/gopath/default/pkg"
-fi
-export GOPATH="$HOME/gopath/3rd:$HOME/gopath/default"
-
 # https://github.com/vigneshwaranr/bd
 alias bd='. bd -s'
 
