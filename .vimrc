@@ -8,6 +8,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'vim-scripts/python.vim'
+Bundle 'majutsushi/tagbar'
 filetype plugin indent on
 
 syntax on
@@ -57,3 +58,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 
 " for NerdTree
 map <F2> :NERDTreeToggle <CR>
+
+" for tagbar
+nmap <F8> :TagbarToggle<CR>
