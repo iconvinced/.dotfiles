@@ -12,6 +12,10 @@ alias vi='vim'
 # https://github.com/vigneshwaranr/bd
 alias bd='. bd -s'
 
+if [[ "$(uname)" == "Linux" && -f "$HOME/.bash_linux" ]]; then
+    source "$HOME/.bash_linux"
+fi
+
 if [[ -f "$HOME/.bash_local" ]]; then
     source "$HOME/.bash_local"
 fi
