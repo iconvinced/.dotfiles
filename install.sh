@@ -16,6 +16,8 @@ INSTALL_FILES=(
     "bin"
 )
 
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
 echo "install .dotfiles to $INSTALL_FOLDER:"
 if [[ -d $INSTALL_FOLDER ]]; then
     for file in ${INSTALL_FILES[@]}; do
@@ -23,4 +25,7 @@ if [[ -d $INSTALL_FOLDER ]]; then
         cp -R $file $INSTALL_FOLDER
     done
 fi
+
+cd -
+
 echo "done"
