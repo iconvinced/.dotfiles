@@ -20,6 +20,8 @@ INSTALL_FILES=(
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
+git submodule update --init
+
 echo "install .dotfiles to $INSTALL_FOLDER:"
 if [[ -d $INSTALL_FOLDER ]]; then
     for file in ${INSTALL_FILES[@]}; do
