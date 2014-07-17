@@ -21,6 +21,7 @@ INSTALL_FILES=(
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 git submodule update --init
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O || true
 
 echo "install .dotfiles to $INSTALL_FOLDER:"
 if [[ -d $INSTALL_FOLDER ]]; then
