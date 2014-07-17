@@ -24,6 +24,11 @@ if [[ -f "$HOME/.bash_local" ]]; then
     source "$HOME/.bash_local"
 fi
 
+" for git comletion
+if [[ -f "$HOME/git-completion.bash" ]]; then
+    source "$HOME/git-completion.bash"
+fi
+
 # ssh-agent
 if [[ -z $SSH_AGENT_PID ]]; then
     eval `ssh-agent -s`
