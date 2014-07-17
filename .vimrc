@@ -1,14 +1,15 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'vim-scripts/python.vim'
-Bundle 'majutsushi/tagbar'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'vim-scripts/python.vim'
+Plugin 'majutsushi/tagbar'
+call vundle#end()
 filetype plugin indent on
 
 syntax on
