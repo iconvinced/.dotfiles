@@ -6,31 +6,34 @@ if [[ $# -ne "1" ]]; then
 fi
 
 INSTALL_FOLDER=$1
+FROM=$PWD
+IN="$(dirname "${BASH_SOURCE[0]}")"
+THISFILE=$(basename "${BASH_SOURCE[0]}")
 
-INSTALL_FILES=(
-    ".bash_profile"
-    ".bash_logout"
-    ".bash_linux"
-    ".gitconfig"
-    ".vimrc"
-    ".tmux.conf"
-    ".vim"
-    "bin"
-)
+pre_install()
+{
+    cd $IN
 
-cd "$(dirname "${BASH_SOURCE[0]}")"
+    git submodule update --init
+    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O &> /dev/null
+}
 
-git submodule update --init
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O || true
-
-echo "install .dotfiles to $INSTALL_FOLDER:"
-if [[ -d $INSTALL_FOLDER ]]; then
-    for file in ${INSTALL_FILES[@]}; do
-        echo "    $file"
-        cp -R $file $INSTALL_FOLDER
+run()
+{
+    for file in `find . -mindepth 1 -maxdepth 1 ! -name $THISFILE`; do
+        if [[ -d $INSTALL_FOLDER ]]; then
+            echo "install $file to $INSTALL_FOLDER"
+            cp -R $file $INSTALL_FOLDER
+        fi
     done
-fi
 
-cd -
+}
 
-echo "done"
+post_install()
+{
+    cd $FROM
+}
+
+pre_install
+run $1
+post_install
