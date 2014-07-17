@@ -20,7 +20,7 @@ pre_install()
 
 run()
 {
-    for file in `find . -mindepth 1 -maxdepth 1 ! -name $THISFILE`; do
+    for file in `find . -mindepth 1 -maxdepth 1 ! -name $THISFILE ! -name '.git*'`; do
         if [[ -d $INSTALL_FOLDER ]]; then
             echo "install $file to $INSTALL_FOLDER"
             cp -R $file $INSTALL_FOLDER
