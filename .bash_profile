@@ -24,7 +24,7 @@ if [[ -f "$HOME/.bash_local" ]]; then
     source "$HOME/.bash_local"
 fi
 
-" for git comletion
+# for git comletion
 if [[ -f "$HOME/git-completion.bash" ]]; then
     source "$HOME/git-completion.bash"
 fi
