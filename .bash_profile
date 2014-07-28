@@ -25,8 +25,8 @@ if [[ -f "$HOME/.bash_local" ]]; then
 fi
 
 # for git comletion
-if [[ -f "$HOME/git-completion.bash" ]]; then
-    source "$HOME/git-completion.bash"
+if [[ -f "$HOME/.git-completion.bash" ]]; then
+    source "$HOME/.git-completion.bash"
 fi
 
 # ssh-agent
