@@ -15,7 +15,6 @@ pre_install()
     cd $IN
 
     git submodule update --init
-    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O &> /dev/null
 }
 
 run()
