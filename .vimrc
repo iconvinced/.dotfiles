@@ -13,6 +13,7 @@ call vundle#end()
 filetype plugin indent on
 
 syntax on
+colorscheme ron
 
 set encoding=utf-8
 set number
