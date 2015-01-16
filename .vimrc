@@ -24,6 +24,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set backspace=2
+set background=dark
 
 " open vim at the location that was last edited
 if has("autocmd")
