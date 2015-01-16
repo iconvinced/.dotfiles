@@ -9,9 +9,6 @@ alias ll='ls -lhF'
 alias grep='grep --color'
 alias vi='vim'
 
-# https://github.com/vigneshwaranr/bd
-alias bd='. bd -s'
-
 if [[ "$(uname)" == "Linux" && -f "$HOME/.bash_linux" ]]; then
     source "$HOME/.bash_linux"
 fi
