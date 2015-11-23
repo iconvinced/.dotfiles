@@ -13,8 +13,6 @@ THISFILE=$(basename "${BASH_SOURCE[0]}")
 pre_install()
 {
     cd $IN
-    rm -rf .vim/
-    git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
 }
 
 run()
@@ -30,6 +28,11 @@ run()
 
 post_install()
 {
+    if [[ -d $INSTALL_FOLDER ]]; then
+        cd $INSTALL_FOLDER
+        rm -rf .vim/
+        git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
+    fi
     cd $FROM
 }
 
