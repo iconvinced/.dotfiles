@@ -13,8 +13,8 @@ THISFILE=$(basename "${BASH_SOURCE[0]}")
 pre_install()
 {
     cd $IN
-
-    git submodule update --init
+    rm -rf .vim/
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 }
 
 run()
