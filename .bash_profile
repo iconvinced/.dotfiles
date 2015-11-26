@@ -2,8 +2,12 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export TERM="screen-256color"
 export EDITOR="vim"
-export PROMPT_COMMAND="export PS1=\"\[\e[1;3\$(expr \$(expr \$(date "+%M") + 1) % 7 + 1)m\]\H\[\e[0m\]:\[\e[1;3\$(expr \$(expr \$(date "+%M") + 2) % 7 + 1)m\]\$PWD\[\e[0m\] > \""
 export PATH="$HOME/bin:$PATH"
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PROMPT_COMMAND="export PS1=\"\[\e[1;3\$(expr \$(expr \$(date "+%M") + 1) % 7 + 1)m\]\H\[\e[0m\]:\[\e[1;3\$(expr \$(expr \$(date "+%M") + 2) % 7 + 1)m\]\$PWD\[\e[0m\]\$(parse_git_branch) > \""
 
 alias ll='ls -lhF'
 alias grep='grep --color'
