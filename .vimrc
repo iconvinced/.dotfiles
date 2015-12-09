@@ -7,7 +7,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
-Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 filetype plugin indent on
 
