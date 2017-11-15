@@ -25,6 +25,7 @@ set ignorecase
 set backspace=2
 set background=dark
 set tags=tags;
+set nofixendofline
 
 " open vim at the location that was last edited
 if has("autocmd")
