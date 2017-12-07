@@ -69,5 +69,3 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 2
 if has("autocmd")
     autocmd BufReadPost * :DetectIndent
 endif
-let g:detectindent_preferred_expandtab = 1
-let g:detectindent_preferred_indent = 4
