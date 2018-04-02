@@ -26,6 +26,7 @@ set backspace=2
 set background=dark
 set tags=tags;
 set nofixendofline
+set expandtab
 
 " open vim at the location that was last edited
 if has("autocmd")
