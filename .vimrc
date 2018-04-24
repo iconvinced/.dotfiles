@@ -9,7 +9,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
-Plugin 'ciaranm/detectindent'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
@@ -27,6 +26,8 @@ set background=dark
 set tags=tags;
 set nofixendofline
 set expandtab
+set tabstop=4
+set shiftwidth=4
 
 " open vim at the location that was last edited
 if has("autocmd")
@@ -65,8 +66,3 @@ map <F8> :TagbarToggle<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
-
-" for detectindent
-if has("autocmd")
-    autocmd BufReadPost * :DetectIndent
-endif
