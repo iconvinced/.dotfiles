@@ -41,6 +41,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " shortcut to move between buffered files
 nnoremap <C-h> :bp! <CR>
