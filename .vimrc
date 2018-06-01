@@ -36,6 +36,8 @@ endif
 
 " highlight extra white space
 highlight ExtraWhitespace ctermbg=red guibg=red
+highlight Pmenu ctermbg=gray guibg=gray
+highlight PmenuSel ctermbg=green guibg=green
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
