@@ -34,3 +34,10 @@ if [[ -z $SSH_AGENT_PID ]]; then
     eval `ssh-agent -s`
     trap "ssh-agent -k" EXIT
 fi
+
+b() {
+    local backto=$(pwd | grep -iEo "^.*($1)[^/]*/")
+    if [ ! -z "$backto" ]; then
+        cd $backto
+    fi
+}
