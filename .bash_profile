@@ -12,6 +12,10 @@ export PROMPT_COMMAND="export PS1=\"\[\e[1;3\$(expr \$(expr \$(date "+%M") + 1) 
 alias ll='ls -lhF'
 alias grep='grep --color'
 alias vi='nvim'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 if [[ "$(uname)" == "Linux" && -f "$HOME/.bash_linux" ]]; then
     source "$HOME/.bash_linux"
