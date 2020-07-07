@@ -29,10 +29,6 @@ if [[ -f "$HOME/.bash_local" ]]; then
     source "$HOME/.bash_local"
 fi
 
-if [ -f "$HOME/bin/z.sh" ]; then
-    source "$HOME/bin/z.sh"
-fi
-
 # ssh-agent
 if [[ -z $SSH_AGENT_PID ]]; then
     eval `ssh-agent -s`
