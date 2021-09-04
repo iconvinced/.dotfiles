@@ -1,9 +1,8 @@
 call plug#begin()
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 call plug#end()
 
 syntax on
@@ -42,8 +41,9 @@ nnoremap <C-h> :bp! <CR>
 nnoremap <C-l> :bn! <CR>
 
 " statusline
-set laststatus=0
+"set laststatus=0
 
 " script practice
 runtime! airline.vim
 runtime! nerdtree.vim
+runtime! leaderf.vim
