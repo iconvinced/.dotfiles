@@ -47,4 +47,3 @@ set laststatus=0
 " script practice
 runtime! airline.vim
 runtime! nerdtree.vim
-runtime! ctrlp.vim
